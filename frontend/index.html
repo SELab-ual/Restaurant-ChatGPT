@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RMOS Sprint 1</title>
+</head>
+<body>
+  <h1>RMOS Sprint 1 Prototype</h1>
+
+  <button onclick="loadMenu()">Load Menu</button>
+  <ul id="menu"></ul>
+
+  <script>
+    async function loadMenu() {
+      const res = await fetch('/api/menu');
+      const data = await res.json();
+      document.getElementById('menu').innerHTML =
+        data.map(i => '<li>' + i.name + '</li>').join('');
+    }
+  </script>
+</body>
+</html>
