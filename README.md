@@ -20,13 +20,8 @@ Deliver a working “happy path” where:
    * Run: `docker --version`
    * Run: `docker compose version` (or `docker-compose --version`)
 
-2. **Ports available**
 
-   * The prototype uses **port 80** on your machine (`http://localhost`).
-   * If port 80 is busy, change `docker-compose.yml` to `8080:80` and use `http://localhost:8080`.
-
-
-3. Build and start everything:
+2. Build and start everything:
 
    ```bash
    docker compose up --build
@@ -34,7 +29,7 @@ Deliver a working “happy path” where:
 
    (or `docker-compose up --build`)
 
-4. Open the prototype UI:
+3. Open the prototype UI:
 
-   * Frontend: `http://localhost`
-   * API docs (Swagger): `http://localhost/api/docs`
+   * Frontend:  http://172.18.0.1/
+   
